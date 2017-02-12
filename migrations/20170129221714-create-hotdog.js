@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       meal_name: {
-        type: Sequelize.VARCHAR(255)
+        type: Sequelize.STRING
       },
       devoured: {
         type: Sequelize.BOOLEAN,

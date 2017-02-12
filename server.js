@@ -13,7 +13,7 @@ app.use(express.static(__dirname + '/public'));
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
 	extended: false
-}));
+}))
 
 // override with POST having ?_method=DELETE
 app.use(methodOverride('_method'));
@@ -30,7 +30,7 @@ app.use('/updateOne', router);
 app.use('/deleteOne', router);
 
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3030;
 app.listen(port, function () {
 	console.log('Listening on PORT ' + port);
 });

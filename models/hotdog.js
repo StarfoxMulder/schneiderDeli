@@ -1,12 +1,16 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Hotdog = sequelize.define('Hotdog', {
-    meal_name: DataTypes.VARCHAR(255),
-    devoured: DataTypes.BOOLEAN
+    meal_name: DataTypes.STRING,
+    devoured: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    }
   }, {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
+        Hotdog.hasOne(models.Customer);
       }
     }
   });

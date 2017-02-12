@@ -2,14 +2,13 @@ CREATE DATABASE IF NOT EXISTS hotdogs_db;
 
 USE hotdogs_db;
 
-DROP TABLE IF EXISTS hotdogs;
+-- DROP TABLE IF EXISTS hotdogs;
 
 CREATE TABLE hotdogs
 (
 	id int NOT NULL AUTO_INCREMENT,
 	meal_name varchar(255) NOT NULL,
-	devoured BOOLEAN DEFAULT false,
-	meal_date timestamp NOT NULL,
+	devoured BOOL DEFAULT false,
 	PRIMARY KEY (id)
 );
 

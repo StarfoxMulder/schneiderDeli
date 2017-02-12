@@ -1,4 +1,4 @@
-var connection = require('../config/connection.js');
+var connection = require('./connection.js');
 
 //////// ORM Attempt Two /////////
 
@@ -6,6 +6,7 @@ function objToSql(ob) {
 	var arr = [];
 
 	for (var key in ob) {
+		// The following if conditional may nto be necessary
 		if (ob.hasOwnProperty(key)) {
 			arr.push(key + '=' + ob[key]);
 		}
@@ -41,6 +42,8 @@ var orm = {
 	    queryString = queryString + 'VALUES (';
 	    queryString = queryString + printQuestionMarks(valOfCols.length);
 	    queryString = queryString + ') ';
+
+	    console.log(queryString);
 
 		connection.query(queryString, valOfCols, function (err, res){
 			if(err) throw err;

@@ -42,9 +42,15 @@ button{
 	color: white;
 	text-decoration: underline;
 }
-.burgerType{
+.burgerType {
 	font-family: 'Sansita One', cursive;
 	font-size: 24px;
+	text-align: left;
+	color: white;
+}
+.eatenBy {
+	font-family: 'Sansita One', cursive;
+	font-size: 20px;
 	text-align: left;
 	color: white;
 }
@@ -65,7 +71,5 @@ button{
 }
 
 #orderDoneDiv {
-	
-}
 
-	
+}
